@@ -1,0 +1,263 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Andrew}{Lawson}{ \urlstyle{same}\href{http://www.andrewlawson.us}{www.andrewlawson.us} |
+\href{mailto:aeriklawson@gmail.com}{aeriklawson@gmail.com} | 203.217.1768
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.38\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{University of Connecticut}
+\descript{BSE in Computer Science \& Engr.}
+\descript{Minor in Mathematics}
+\location{May 2015 | Storrs, CT}
+\location{Cum. GPA: 3.55 / 4.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+GitHub: \href{https://github.com/aelawson}{\bf aelawson} \\
+Facebook: \href{https://facebook.com/aeriklawson}{\bf aeriklawson} \\
+LinkedIn:  \href{https://www.linkedin.com/in/aeriklawson}{\bf aeriklawson} \\
+Twitter:  \href{https://twitter.com/aeriklawson}{\bf aeriklawson} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Machine Learning \\
+\sectionsep
+
+\subsection{Undergraduate}
+Operating Systems \\
+Programming Languages \\
+Algorithms \& Complexity \\
+Stochastic Processes
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Proficient:}
+Python \textbullet{} Java \textbullet{} C\# \textbullet{} JavaScript \\
+\location{Prev. Experience:}
+C \textbullet{} C++ \textbullet{} PHP \textbullet{} Perl \textbullet{} \\
+MySQL \textbullet{} PostgreSQL
+\sectionsep
+\subsection{Source Control}
+\location{Prev. Experience:}
+Git \textbullet{} SVN \textbullet{} Mercurial \textbullet{} CVS
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACTIVITIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Activities}
+\location{2016}
+Code for Boston \\
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Open Source Contributor
+\end{tightemize}
+Mozilla \\
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Open Source Contributor
+\end{tightemize}
+\location{2014 - 2015}
+UConn Robotics Club \\
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Treasurer
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+\location{2015}
+University Scholar \\
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Highest academic distinction \\ awarded to undergraduates.
+\end{tightemize}
+Honors Scholar
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.61\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{BBN Technologies}
+\descript{| Software Engineer }
+\location{Jun. 2015 - Present | Cambridge, MA}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Helped ship M3S, a distributed web application that provides automatic translation and analysis of foreign media sources.
+\item Led development of a core feature that aggregates and translates tagged users' social media posts.
+\item Built with C\#, JavaScript, and ASP.NET MVC.
+\item All code deployed globally and showcased to new customers.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Schwartz Lab}
+\descript{| Software Developer }
+\location{Aug. 2014 - May 2015 | Storrs, CT}
+\begin{tightemize}
+\item Led and shipped LincusAnalytics - a text analysis engine for identifying university research areas that maximize grant awards. 
+\item Wrote several automated systems used daily to mine web data.
+\item All built with Python and MySQL. Deployed on Amazon EC2.
+\end{tightemize}
+\sectionsep
+
+%\runsubsection{Royal Bank of Scotland}
+%\descript{| Summer Tech Analyst }
+%\location{Jun. 2014 - Aug. 2014 | Stamford, CT}
+%\begin{tightemize}
+%\item Created a Perl web app used by the entire derivatives desk to manage product portfolios.
+%\item Worked on a tool that automates daily financial reports using Perl and T-SQL.
+%\item Designed and taught a Raspberry Pi / Python class to an underprivileged middle school.
+%\end{tightemize}
+%\sectionsep
+
+\runsubsection{UConn AITC}
+\descript{| Software Engineering Intern}
+\location{Jul. 2013 - Feb. 2014 | Storrs, CT}
+\begin{tightemize}
+\item Developed an interactive wall for Boston Children's Hospital's main lobby - used daily by visitors, staff, and patients.
+\item Helped write a Kinect-based system that lets players use gestures to control on-screen avatars.
+\item Designed and coded avatar behavior and a user tracking system.
+\item Built with C\#, Unity3D, and Microsoft Kinect.
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Netflix Comments} \\
+\location{Apr. 2016 - Present}
+\begin{tightemize}
+\item Mobile app that adds a commenting system to Netflix. Made with React Native.
+\item Created a Chrome extension that synchronizes Netflix timestamps with the mobile app using JavaScript and Socket.IO.
+\item Developed a REST API / backend using Node.js, Redis, and PostgreSQL.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{ByPath (Code for Boston)} \\
+\location{Jan. 2016 - Present}
+\begin{tightemize}
+\item Open source mobile routing app that makes city-wide navigation easier for pedestrians with limited mobility.
+\item Built with two teammates using Ionic, AngularJS, Leaflet, Node.js, and PostgreSQL.
+\item Published (alpha) on the Apple App Store.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Autonomous Quadcopter} \\
+\location{Jan. 2013 - May 2015}
+\begin{tightemize}
+\item Led R\&D of an autonomous quadcopter robot that generates a 3D map of GPS-denied environments using a Microsoft Kinect.
+\item Co-led two senior capstone teams to create a navigation and sensor system using C++ and Arduino. Won 2/20 for best capstone project.
+\item Developed a real-time, distributed system that fuses 3D point clouds generated by multiple quadcopters in C++.
+\end{tightemize}
+\sectionsep
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
